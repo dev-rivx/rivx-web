@@ -5,7 +5,7 @@ import { useHomeHeroAssets } from '@hooks/queries';
 import { useInView } from 'react-intersection-observer';
 
 import Info from './components/Info';
-import Title from './images/headline.inline.svg';
+import Title from './images/headline2.inline.svg';
 import PropTypes from 'prop-types';
 
 import styles from './Hero.module.scss';
@@ -55,7 +55,7 @@ const Hero = ({ animation }) => {
         </animated.div>
       </div>
 
-      <Info {...infoAssets} />
+      {/* <Info {...infoAssets} /> */}
     </section>
   );
 };

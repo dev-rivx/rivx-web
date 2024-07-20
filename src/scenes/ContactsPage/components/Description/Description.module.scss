@@ -48,7 +48,7 @@
   @include grid-template();
 
   h2 {
-    @include hl-font-size-title(30px);
+    @include hl-font-size-title(24px);
     font-weight: 900;
     font-family: $font-gramatika;
     line-height: 1.63em;

@@ -1,0 +1,53 @@
+@import '@styles/variables/all';
+@import '@styles/mixins/all';
+
+.container {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: $white-color;
+    font-family: $font-gramatika;
+    font-weight: 900;
+    padding: 50px;
+    text-align: left;
+    border: 0.5px solid rgba(255, 255, 255, 0.1);
+    border-end-end-radius: 0px;
+    border-end-start-radius: 50px;
+    border-start-end-radius: 50px;
+    border-start-start-radius: 0px;
+    @include hl-margin(top, 10px);
+    @include hl-margin(bottom, 10px);
+    @include hl-margin(left, 10px);
+    @include hl-margin(right, 10px);
+}
+
+.title {
+    color: $white-color;
+    font-family: $font-gramatika;
+    font-weight: 900;
+    @include hl-font-size-title(18px);
+    line-height: 1;
+    // letter-spacing: -2px;
+    // margin: auto;
+    @media screen and (max-width: $md) {
+      --coef-title: 0.75;
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+    @media screen and (max-width: $xs) {
+      --coef-title: 0.65;
+    }
+  }
+
+  .description {
+    @include hl-font-size-text(16px);
+    font-weight: 300;
+    line-height: 1.6;
+    opacity: 0.9;
+    letter-spacing: 0.5px;
+    margin-top: 4px;
+  }

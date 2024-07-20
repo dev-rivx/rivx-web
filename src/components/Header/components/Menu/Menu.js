@@ -19,23 +19,23 @@ const Menu = () => {
 
   const items = [
     {
-      title: 'Projects',
-      link: '/portfolio/',
-      icon: portfolioIcon,
-      stars: portfolioStars,
-    },
-    {
       title: 'Services',
       link: '/services/',
       icon: servicesIcon,
       stars: servicesStars,
     },
     {
-      title: 'Blog',
-      link: '/blog/',
-      icon: blogIcon,
-      stars: blogStars,
+      title: 'About us',
+      link: '/about-us/',
+      icon: portfolioIcon,
+      stars: portfolioStars,
     },
+    // {
+    //   title: 'Blog',
+    //   link: '/blog/',
+    //   icon: blogIcon,
+    //   stars: blogStars,
+    // },
     {
       title: 'Contacts',
       link: '/contacts/',

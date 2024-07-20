@@ -1,0 +1,115 @@
+@import '@styles/variables/all';
+@import '@styles/mixins/all';
+
+.container {
+    @include hl-margin(top, 200px);
+    text-align: center;
+  
+    @media (min-width: 1280px) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    :global(.slick-track) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+
+  .title {
+    color: $white-color;
+    font-family: $font-gramatika;
+    font-weight: 900;
+    @include hl-font-size-title(86px);
+    line-height: 1;
+    // letter-spacing: -2px;
+    margin: auto;
+    @media screen and (max-width: $md) {
+      --coef-title: 0.75;
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+    @media screen and (max-width: $xs) {
+      --coef-title: 0.65;
+    }
+  }
+
+  .container {
+    padding: 50px; // Add padding to the container
+  }
+  
+  .wrapper {
+    @include hl-margin(top, 100px);
+    @include hl-margin(bottom, 100px);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: flex-start; // Align items to the start for vertical line to work
+    justify-content: space-between; // Distribute space between the elements
+    animation: slide-up 1s ease-in-out;
+
+    @keyframes slide-up {
+      0% {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media screen and (max-width: $md) {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      flex-direction: column;
+      flex-wrap: wrap; // Wrap elements if they don't fit on the line
+    }
+  }
+  
+  .subtitle {
+    color: $white-color;
+    font-family: $font-gramatika;
+    font-weight: 900;
+    @include hl-font-size-title(30px);
+    line-height: 1.53em;
+    letter-spacing: -0.5px;
+    margin-bottom: 20px;
+
+    @media screen and (max-width: $md) {
+      margin-bottom: 10px;
+    }
+  }
+  
+  .description {
+    @include hl-font-size-text(18px);
+    font-weight: 300;
+    line-height: 1.6;
+    opacity: 0.9;
+    letter-spacing: 0.5px;
+    margin-top: -4px;
+  }
+
+  .info {
+    padding-left: 50px;
+    padding-right: 50px;
+    @media screen and (max-width: $md) {
+      padding-left: 20px;
+      padding-right: 20px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .line {
+    @include hl-width(0.5px);
+    @include hl-height(100px);
+    background: #fff;
+    // background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.5));
+    opacity: 0.25;
+    margin: auto;
+    @media screen and (max-width: $md) {
+      display: none;
+    }
+  }

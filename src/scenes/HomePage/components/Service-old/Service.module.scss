@@ -1,0 +1,86 @@
+@import '@styles/variables/all';
+@import '@styles/mixins/all';
+
+.container {
+    @include hl-margin(top, 200px);
+    text-align: center;
+  
+    @media (min-width: 1280px) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    :global(.slick-track) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+
+  .title {
+    color: $white-color;
+    font-family: $font-gramatika;
+    font-weight: 900;
+    @include hl-font-size-title(86px);
+    line-height: 1;
+    // letter-spacing: -2px;
+    margin: auto;
+    @media screen and (max-width: $md) {
+      --coef-title: 0.75;
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+    @media screen and (max-width: $xs) {
+      --coef-title: 0.65;
+    }
+  }
+
+  .description {
+    @include hl-font-size-text(18px);
+    font-weight: 300;
+    line-height: 1.6;
+    opacity: 0.9;
+    letter-spacing: 0.5px;
+    margin-top: -4px;
+  }
+
+
+  hr {
+    margin: 0 auto;
+    margin-top: 40px;
+    width: 20%;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+}
+
+.wrapper {
+    padding-top: 50px;
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    @media screen and (max-width: $md) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (max-width: $xs) {
+        grid-template-columns: 1fr;
+    }
+
+    animation: slide-up 1s ease-in-out; // Add animation
+
+    @keyframes slide-up {
+      0% {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+}

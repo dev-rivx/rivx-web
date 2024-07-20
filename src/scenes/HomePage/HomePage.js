@@ -7,10 +7,13 @@ import Testimonials from './components/Testimonials';
 import Gallery from './components/Gallery';
 import Posts from './components/Posts';
 import Works from './components/Works';
+import AboutUs from './components/AboutUs';
 
 import PropTypes from 'prop-types';
 
 import styles from './HomePage.module.scss';
+import Development from '../ServicesPage/components/Development';
+// import Service from './components/Service';
 
 const HomePage = ({ animation }) => {
   return (
@@ -19,15 +22,18 @@ const HomePage = ({ animation }) => {
         <Hero animation={animation} />
         <WhatWeDo />
       </div>
-      <Works />
-      <div className="pageWrapper">
-        <Projects title="Projects" navigation={true} />
-      </div>
-      <Testimonials />
+      {/* <Service /> */}
+      <Development />
       <Gallery />
-      <div className="pageWrapper">
+      <AboutUs />
+      {/* <Works /> */}
+      {/* <div className="pageWrapper">
+        <Projects title="Projects" navigation={true} />
+      </div> */}
+      {/* <Testimonials /> */}
+      {/* <div className="pageWrapper">
         <Posts />
-      </div>
+      </div>  */}
       <MailUs />
     </div>
   );

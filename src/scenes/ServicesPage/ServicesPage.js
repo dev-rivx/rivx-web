@@ -13,11 +13,11 @@ const ServicesPage = () => {
   return (
     <div className={`${styles.container}`}>
       <div className="pageWrapper">
-        <Design />
+        {/* <Design /> */}
         <Development />
         <Flow />
-        <Industries />
-        <Technologies />
+        {/* <Industries /> */}
+        {/* <Technologies /> */}
       </div>
       <MailUs />
     </div>

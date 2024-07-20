@@ -3,16 +3,16 @@ const { nanoid } = require('nanoid');
 const { version } = require('./package.json');
 
 
-const siteUrl = process.env.URL || `https://www.halo-lab.com`
+const siteUrl = process.env.URL || `https://rivx.xyz`
 
 module.exports = {
   pathPrefix: "/rivx-web",
   siteMetadata: {
-    title: `Halo-Lab`,
-    description: `Experts from all your network providers integrated into one powerful platform.`,
+    title: `rivx web`,
+    description: `Seamless Digital Solutions for Crypto Ventures. Unlock the Potential of Blockchain and Decentralized Technologies`,
     author: `@halolabteam`,
-    email: `mail@halo-lab.com`,
-    siteUrl: `https://halo-lab.com`,
+    email: `mail@team.vxcrypt@gmail.com`,
+    siteUrl: `https://rivx.xyz`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
