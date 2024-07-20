@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /
+Sitemap: https://rivx.xyz/sitemap.xml
+Host: https://rivx.xyz
